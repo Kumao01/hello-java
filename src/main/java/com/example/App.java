@@ -1,13 +1,13 @@
 package com.example;
 
 /**
- * Hello world!
+ * study branch
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello Git!" );
+        System.out.println( "study branch" );
     }
 }
