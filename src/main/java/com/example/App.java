@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "study branch" );
+        System.out.println( "お問い合わせ機能" );
     }
 }
