@@ -13,5 +13,17 @@ public class StudyRecord {
         this.studyMinutes = studyMinutes;
         this.memo = memo;
     }
+    public LocalDate getStudyDate() {
+        return studyDate;
+    }
+    public String getSubject() {
+        return subject;
+    }
+    public int getStudyMinutes() {
+        return studyMinutes;
+    }
+    public String getMemo() {
+        return memo;
+    }
 
 }
