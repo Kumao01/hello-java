@@ -25,5 +25,16 @@ public class StudyRecord {
     public String getMemo() {
         return memo;
     }
-
+    public void setStudyDate(LocalDate StudyDate) {
+        this.studyDate = studyDate;
+    }
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+    public void setStudyMinutes(int studyMinutes) {
+        this.studyMinutes = studyMinutes;
+    }
+    public void setMemo(String memo) {
+        this.memo = memo;
+    }
 }
