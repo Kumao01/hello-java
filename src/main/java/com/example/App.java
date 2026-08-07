@@ -23,7 +23,9 @@ public class App
         );
         records.add(record1);
         records.add(record2);
-        System.out.println(records.size());
-        System.out.println(records.get(1).getSubject());
+
+        for(int i = 0; i < records.size(); i++){
+            System.out.println(records.get(i).getSubject() + " " + records.get(i).getStudyMinutes() + "分");
+        }
     }
 }
