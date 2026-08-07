@@ -28,6 +28,12 @@ public class App
         records.add(record1);
         records.add(record2);
 
+        System.out.println("=== 学習記録一覧 ===");
+
+        for(StudyRecord record : records) {
+            System.out.println(record.getSubject() + " " + record.getStudyMinutes() + "分");
+        }
+
         for(StudyRecord record : records){
             String subject = record.getSubject();
             int minutes = record.getStudyMinutes();
@@ -38,16 +44,22 @@ public class App
                 studyTimes.put(subject, studyTimes.get(subject) + minutes);
             }
         }
+        
+        System.out.println("=== 科目別学習時間 ===");
 
         for(String subject : studyTimes.keySet()) {
             System.out.println(subject + " " + studyTimes.get(subject) + "分");
         }
+
+        System.out.println("=== Javaの学習記録 ===");
 
         records.stream()
             .filter(record -> record.getSubject().equals("Java"))
             .forEach(record -> System.out.println(
                 record.getSubject() + " : " + record.getStudyMinutes() + "分")
             );
+
+        System.out.println("=== 学習時間の入力確認 ===");
 
         String inputMinutes = "60";
 
