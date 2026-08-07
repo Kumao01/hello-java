@@ -48,5 +48,14 @@ public class App
             .forEach(record -> System.out.println(
                 record.getSubject() + " : " + record.getStudyMinutes() + "分")
             );
+
+        String inputMinutes = "60";
+
+        try {
+            int minutes = Integer.parseInt(inputMinutes);
+            System.out.println("学習時間：" + minutes + "分");
+        } catch (NumberFormatException e) {
+            System.out.println("学習時間は数字で入力してください");
+        }
     }
 }
