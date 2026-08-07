@@ -2,13 +2,17 @@ package com.example;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class App 
 {
     public static void main( String[] args )
     {   
         List<StudyRecord> records = new ArrayList<>();
+        Map<String, Integer> studyTimes = new HashMap<>();  
+
         StudyRecord record1 = new StudyRecord(
             LocalDate.of(2026, 8, 7), 
             "Java", 
@@ -24,8 +28,20 @@ public class App
         records.add(record1);
         records.add(record2);
 
-        for(int i = 0; i < records.size(); i++){
-            System.out.println(records.get(i).getSubject() + " " + records.get(i).getStudyMinutes() + "分");
+        for(StudyRecord record : records){
+            String subject = record.getSubject();
+            int minutes = record.getStudyMinutes();
+
+            if (! studyTimes.containsKey(subject)) {
+                studyTimes.put(subject, minutes);
+            } else {
+                studyTimes.put(subject, studyTimes.get(subject) + minutes);
+            }
         }
+
+        for(String subject : studyTimes.keySet()) {
+            System.out.println(subject + " " + studyTimes.get(subject) + "分");
+        }
+
     }
 }
