@@ -43,5 +43,10 @@ public class App
             System.out.println(subject + " " + studyTimes.get(subject) + "分");
         }
 
+        records.stream()
+            .filter(record -> record.getSubject().equals("Java"))
+            .forEach(record -> System.out.println(
+                record.getSubject() + " : " + record.getStudyMinutes() + "分")
+            );
     }
 }
